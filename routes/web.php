@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PeopleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,13 +19,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/MyProfile', function () {
-        return view('MyProfile');
-    })->name('MyProfile');
+    Route::get('/MyProfile', [PeopleController::class, 'myProfile'])->name('MyProfile');
+    Route::get('/ExtraInfo', [PeopleController::class, 'extraInfo'])->name('ExtraInfo');
 
-    Route::get('/ExtraInfo', function () {
-        return view('ExtraInfo');
-    })->name('ExtraInfo');
+    Route::resource('people', PeopleController::class);
 });
 
 require __DIR__.'/auth.php';

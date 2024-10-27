@@ -11,10 +11,10 @@
                     {{ __("You're logged in!") }}
                 </div>
                 <div class="mt-4">
-                    <a href="{{ route('ExtraInfo') }}" class="text-blue-500 hover:underline">Перейти на Page 1</a>
+                    <a href="{{ route('ExtraInfo') }}" class="text-blue-500 hover:underline">Перейти на ExtraInfo</a>
                 </div>
                 <div class="mt-2">
-                    <a href="{{ route('MyProfile') }}" class="text-blue-500 hover:underline">Перейти на Page 2</a>
+                    <a href="{{ route('MyProfile') }}" class="text-blue-500 hover:underline">Перейти на MyProfile</a>
                 </div>
             </div>
         </div>

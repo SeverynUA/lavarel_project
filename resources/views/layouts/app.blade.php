@@ -1,3 +1,5 @@
+@include('components.navigation-links')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -29,7 +31,9 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content')
+                
+                <x-navigation-links />
             </main>
         </div>
     </body>
